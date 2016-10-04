@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<!-- Name Generator
+			Created by Karsten Spencer
+		
+		
+		Author: Karsten Spencer
+		Date: 10/1/16
+	-->	
+
+	<meta charset="UTF-8" />
+	<title>Name Generator</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="name_generator.css" type="text/css" />
+	<link rel="icon" type="image/png" href="">
+        
+</head>
+
+<body>
+    
+    <div id="container_content">
+
+<div class="element"></div>
+
+    
+        <header>Name Generator</header>
+        <br>
+        <button name="Generate_Name" id="generate_name">Generate</button>
+        <br>
+        <br>
+        <br>
+        <p>They call me...</p>
+        <br>
+        <h2></h2><!--<span class="blinking-cursor">|</span>-->
+
+
+        <footer>Created by Karsten Spencer &mdash; 10/1/2016 &mdash; V1.0</footer>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js/modernizr.js"></script> 
+        <script src="js/main.js"></script>
+        <script src="jquery.js"></script>
+        <script>$('button').click(function() {
+                
+    $('h2').text(randomEl(first)+' '+randomEl(last));
+                
+});
+
+function randomEl(list) {
+    var i = Math.floor(Math.random() * list.length);
+    return list[i];
+}
+
+function selectElementContents(el) {
+    var range = document.createRange();
+    range.selectNodeContents(el);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+}
+
+var first = ["Liam", "Noah", "Ethan", "Mason", "Lucas", "Logan", "Oliver", "Jackson", "Aiden", "Jacob", "Elijah", "James", "Benjamin", "Alexander", "Jack", "Luke", "William", "Carter", "Michael", "Daniel", "Owen", "Gabriel", "Henry", "Matthew", "Wyatt", "Jayden", "Nathan", "Isaac", "Ryan", "Caleb", "Sebastian", "David", "Andrew", "Dylan", "Samuel", "Connor", "Joshua", "Eli", "Jaxon", "Hunter", "Grayson", "Levi", "Landon", "Anthony", "Julian", "Joseph", "Max", "John", "Adam", "Christian", "Cameron", "Leo", "Gavin", "Lincoln", "Isaiah", "Evan", "Nolan", "Muhammad", "Dominic", "Hudson", "Thomas", "Brayden", "Christopher", "Colton", "Parker", "Aaron", "Nicholas", "Austin", "Adrian"];
+var last = ["Smith", "Johnson", "Williams", "Jones", "Brown", "Davis", "Miller", "Wilson", "Moore", "Taylor", "Anderson", "Thomas", "Jackson", "White", "Harris", "Martin"];
+    
+$('button').click();
+        </script>
+    </div>    
+        
+</body>
+
+
+</html>
